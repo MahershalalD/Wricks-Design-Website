@@ -445,7 +445,3 @@ if (port == null || port == "") {
 app.listen(port, function () {
     console.log("Server started on port");
 });
-// apikey
-// 614f7e7968267ac180b4a9f5f1304076-us18
-//listid
-//5f2c834509
