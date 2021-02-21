@@ -1,0 +1,151 @@
+.df{
+    background-image: url("profile.png");
+    background-size: cover;
+    height: 200px;
+}
+.car{
+    margin-top: 80px !important;
+    margin: auto;
+    margin-bottom: 20px !important;
+    font-family: 'Fondamento', cursive;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: green;
+  border-radius: 50%;
+  display: inline-block;
+}
+.blinking{
+    animation:blinkingText 2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: #000;    }
+    49%{    color: #000; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #000;    }
+}
+.checked {
+  color: orange;
+}
+.check{
+    cursor: pointer;
+}
+.btn-lo{
+  width: 150px;
+  height: 50px;
+  border-width: 2px;
+  border-color: tomato;
+  border-radius: 10px;
+  background: none;
+  font-size: 22px;
+  font-family: 'Balsamiq Sans', cursive; 
+  cursor: pointer;
+    
+}
+.btn-lo:hover{
+ background-color: tomato;
+ color: white;
+}
+.btn-lo:focus{
+   outline: none;
+  outline-style: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .df{
+    background-image: url("user-mobile.png");
+    background-size: cover;
+    height: 200px;
+}
+}
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+
+.card svg {
+  width: 85px;
+  height: 85px;
+  margin: 0 auto;
+}
+
+.img-avatar {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  border-radius: 50%;
+  border: 6px solid white;
+  background-image: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+  top: 15px;
+  left: 85px;
+}
+#hh{
+  background: #DE6262;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFB88C, #DE6262);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFB88C, #DE6262); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+height: 100%;
+padding-bottom: 100px;
+}
+.card-text {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.fff{
+  background: #fff;
+  border-radius: 4px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 30px !important;
+  position: relative;
+  margin-top: 80px !important;
+    margin: auto;
+    margin-bottom: 20px !important;
+    font-family: 'Anton', sans-serif;
+}
+.card h2 {
+  margin: 0;
+  padding: 0 1rem;
+}
+.card .title {
+  padding: 1rem;
+  text-align: right;
+  color: green;
+  font-weight: bold;
+  font-size: 12px;
+}
+.card .desc {
+  padding: 0.5rem 1rem;
+  font-size: 12px;
+}
+.card .actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+.card svg {
+  width: 85px;
+  height: 85px;
+  margin: 0 auto;
+}
+.card-text {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.portada {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-image: url("tr.png");
+  background-position: bottom center;
+  background-size: cover;
+}
+path {
+  fill: white;
+}
+
+.img-portada {
+  width: 100%;
+}

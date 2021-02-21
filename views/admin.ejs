@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wricks-AdminPannel</title>
+    <link rel="stylesheet" href="admin.css">
+<!-- bootstrap -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- googlefonr -->
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+<!-- fontawesome -->
+<script src="https://kit.fontawesome.com/2cf437a4a5.js" crossorigin="anonymous"></script>
+</head>
+<body onload="startTime()">
+    
+    <div class="adminp" >
+    </div>
+        <div class="container-fluid dd">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light"  style="background-color: #2f3640 !important;">
+                <a class="navbar-brand dd bgfor" href="/admin" style=" color: white !important;">WRICKS ADMIN</a>
+                 <a class="navbar-brand dh" href="/comple" style=" color: white !important;">COMPLETED</a>
+                <a class="navbar-brand dh" href="/testi" style=" color: white !important;">FEEDBACK</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ml-auto">
+                        
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ml-auto">
+                        <a class="nav-item nav-link" href="#" style=" color: white !important;">
+                            <table>
+                                <tr>
+                                    <th>
+                                        <i class="fas fa-2x fa-user" style="padding-right:10px ; color: greenyellow;"></i>
+                                    </th>
+                                    <th>
+                                        <h3 style="font-family: 'Oswald', sans-serif; color: red; font-size: 30px; background-color: white; padding: 5px; border-radius: 30px;"><%= noof %></h3>
+                                    </th>
+                                </tr>
+                        
+                            </table>
+                        </a>
+                        <a class="nav-item nav-link active" href="" style=" color: white !important;"><table>
+                            <tr>
+                                <th>
+                                    <h1 class="txt" style="font-family: 'Oswald', sans-serif;">Time :</h1>
+                                </th>
+                                <th>
+                                    <div id="txt" style="font-family: 'Oswald', sans-serif;"> </div>
+                                </th>
+                            </tr>
+                        
+                        </table></a>
+                        <a class="nav-item nav-link" href="#" style=" color: white !important;"><table>
+                            <tr>
+                                <th>
+                                    <span class="blinking">🟢</span>
+                                </th>
+                                <th>
+                                    <h3 style="font-family: 'Oswald', sans-serif; color: chartreuse;">Online </h3>
+                                </th>
+                            </tr>
+                        
+                        </table></a>
+                        <a class="nav-item nav-link" href="#"><table>
+                            <tr>
+                                <th>
+                                    <span class="blinking">🔴</span>
+                                </th>
+                                <th>
+                                    <h3 style="font-family: 'Oswald', sans-serif; color: red;">Database Connected </h3>
+                                </th>
+                            </tr>
+                        
+                        </table></a>
+                        <a class="nav-item nav-link " href="/logout" style=" color: white !important;"><button class="btn btn-outline-danger"> Log-Out</button></a>
+                    </div>
+                </div>
+            </nav>
+    </div>
+    </div> 
+      </div>  </div>
+   <div class="order"> 
+        <!-- <div class="container-fluid hh">
+            <div class="row">
+                <div class="col-lg-1">
+                    <h4>Order NUmber</h4>
+                </div>
+                <div class="col-lg-1">
+                    <h4>&#8942;</h4>
+                </div>
+                <div class="col-lg-1">
+                    <h4>Name</h4>
+                </div>
+                <div class="col-lg-1">
+                    <h4>&#8942;</h4>
+                </div>
+                <div class="col-lg-1">
+                    <h4>Work</h4>
+                </div>
+                <div class="col-lg-1">
+                    <h4>&#8942;</h4>
+                </div>
+                <div class="col-lg-1">
+                    <h4>Contact</h4>
+                </div>
+                <div class="col-lg-1">
+                    <h4>&#8942;</h4>
+                </div>
+                <div class="col-lg-1">
+                    <h4>Due Date</h4>
+                </div>
+                <div class="col-lg-1">
+                    <h4>&#8942;</h4>
+                </div>
+                <div class="col-lg-1">
+                    <h4>Completed</h4>
+                </div>
+            </div>
+        
+        </div> -->
+    
+
+            <%  newListItems.forEach(function(item){ %>
+            <%  if (item.completed!=1){ %>
+        <div class="odrder">
+                    <div class="container-fluid" style="margin-bottom: 2px;">
+                        <div class="row">
+                            <div class="col-lg-1">
+                              <%= item.orderId %>
+                            </div>
+                            <div class="col-lg-1">
+                                <h4>&#8942;</h4>
+                            </div>
+                            <div class="col-lg-1">
+                            <%= item.Name %>
+                            </div>
+                            <div class="col-lg-1">
+                                <h4>&#8942;</h4>
+                            </div>
+                            <div class="col-lg-1">
+                            <%= item.typeOfWork %>
+                            </div>
+                            <div class="col-lg-1">
+                                <h4>&#8942;</h4>
+                            </div>
+                            <div class="col-lg-1">
+                            <%= item.PhoneNumber %>
+                            </div>
+                            <div class="col-lg-1">
+                                <h4>&#8942;</h4>
+                            </div>
+                            <div class="col-lg-1" style="color: red;">
+                            <%= item.Duedate %>
+                            </div>
+                            <div class="col-lg-1">
+                                <h4>&#8942;</h4>
+                            </div>
+                            <div class="col-lg-1">
+                                <%= item.CompanyName %>
+                            </div>
+                            <div class="col-lg-1">
+                                <h4>&#8942;</h4>
+                            </div>
+                            <div class="col-lg-1">
+                                <%= item.timeStamp %>
+                            </div >
+                            <div class="col-lg-3">
+                                <div class="form-group mb-2">
+                                    <form class="form-inline" action="/WorkPer" method="POST">
+                                       <input type="password" name="per" class="form-control mx-sm-3 mb-2"  placeholder="Percentage Completed <%= item.comper %>">
+                                    <button type="submit" class="btn btn-danger mb-2" name="Work" value="<%= item._id %>">Proceed</button> 
+                                    </form> 
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group mb-2">
+                                    <form class="form-inline" action="/WorkDue" method="POST">
+                                        <input type="date" name="due" class="form-control mx-sm-3 mb-2"
+                                            placeholder="Change Due Date">
+                                        <button type="submit" class="btn btn-danger mb-2" name="Work" value="<%= item._id %>">Proceed</button>
+                                    </form>
+                                </div>
+                            </div>
+                                <div class="col-lg-3"> 
+                                     <h5>Feedback</h5>
+                                    <% if(item.Feedback === 1){ %>
+                                        <p style="color: #55E6C1;"><b>Status : Enabled</b></p>
+                                   <%  } else{ %>
+                                    <p style="color: red;"><b>Status : Disabled</b></p>
+                                  <% } %>
+                                    <form action="/feede" method="POST">
+                                       
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="fed1" id="exampleRadios1" value="<%= item._id %>"  onchange="this.form.submit()">
+                                        <label class="form-check-label" for="exampleRadios1">
+                                           Enable 
+                                        </label>
+                                    </div>
+                                    
+                                    </form>
+                                    <form action="/feedd" method="POST">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="fed1" id="exampleRadios1" value="<%= item._id %>"
+                                                onchange="this.form.submit()">
+                                            <label class="form-check-label" for="exampleRadios1">
+                                                Disable 
+                                            </label>
+                                        </div>
+                                    </form>
+                                </div>
+                            <div class="col-lg-2">
+                                <div class="form-group mb-2">
+                            <form action="/delete" method="POST" class="form-inline" >
+                                    <input type="text" name="com"  class="form-control mx-sm-3 mb-2 complete" placeholder="type COMPLETED ">
+                                    <button class="btn btn-danger" type="submit" name="checkbox" value="<%= item._id %>">DELETE</button>
+                                </form>
+                            </div>
+                        </div>
+                        </div>
+                    
+                    </div>
+</div><%} %>
+                    <% }); %>
+       
+   </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

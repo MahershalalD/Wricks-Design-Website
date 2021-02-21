@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="personal.css">
+    
+    
+    <!-- bootstrap cdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/2cf437a4a5.js" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Coda+Caption:wght@800&family=Fondamento&display=swap"
+        rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Do+Hyeon&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="df"></div>
+    <!-- Image and text -->
+    <section id="hh">
+    <nav class="navbar navbar-light ">
+        <a class="navbar-brand" href="/">
+        <i class="fas fa-arrow-circle-left"></i> WRICKS DESIGNS
+        </a>
+    </nav>
+    <div class="container">
+    <div class="card fff">
+        <div >
+            <% image.forEach(function(images){ %>
+                  <img src="<%= images.value %>" alt="" class="img-avatar">
+            <%})%>
+        </div>
+        <div class="card-text">
+            <div class="portada">
+                
+            </div>
+            <div class="title-total">
+                <div class="title"><h5>Athorized User</h5></div>
+                <br>
+                <br>
+                <h2><%= UN %></h2>
+                <div class="card-body">
+                    <p>Welcome You to the Wricks Family, Push the orders for great designs</p>
+                </div>
+                
+            </div>
+    
+        </div>
+    </div>
+    
+    
+    </div>
+    <!-- <div class="card car" style="width: 18rem;">
+        <img class="card-img-top" src="autho.png" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title" style="font-family: 'Anton', sans-serif;"><u>User Card:</u></h5>
+            <h5> User Name : <%= UN %></h5>
+        </div>
+    </div> -->
+    <!-- <%if(vaar.length===0){%>
+        <h1>No orders</h1>
+   <% } %> -->
+    
+        <div class="container">
+    <div class="card car"    style="margin-bottom: 50px !important">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-lg-6" style="font-family: 'Anton', sans-serif;">
+                   <h3>Orders</h3> 
+                </div>
+                <div class="col-lg-6" >
+                    <span class="blinking">🟢</span> In Progress
+                </div>
+            </div>
+        </div>
+            <% vaar.forEach(function(found){ %>
+                <% if(found.completed!=1){ %>
+<div class="card-body">
+    <table>
+        <tr>
+            <th>
+                <h5 style="font-family: 'Coda Caption', sans-serif;">Work Id: </h5>
+            </th>
+            <th>
+                <h5 style="font-family: 'PT Sans', sans-serif;"> <%= found.orderId %></h5>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <h5 style="font-family: 'Coda Caption', sans-serif;">Work: </h5>
+            </th>
+            <th>
+                <h5 style="font-family: 'PT Sans', sans-serif;"> <%= found.typeOfWork %></h5>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <h5 style="font-family: 'Coda Caption', sans-serif;">Expected Date of Delivery: </h5>
+            </th>
+            <th>
+                <h5 style="font-family: 'PT Sans', sans-serif;"> <%= found.Duedate %></h5>
+            </th>
+        </tr>
+    </table>
+
+    <h5>Work Progress : </h5>
+    <div class="progress">
+        <% if(found.comper===10){ %>
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar"
+            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 10%"></div>
+        <% } %>
+        <% if(found.comper===20){ %>
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar"
+            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 20%"></div>
+        <% } %>
+        <% if(found.comper===30){ %>
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar"
+            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 30%"></div>
+        <% } %>
+        <% if(found.comper===40){ %>
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar"
+            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 40%"></div>
+        <% } %>
+        <% if(found.comper===50){ %>
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar"
+            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
+        <% } %>
+        <% if(found.comper===60){ %>
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar"
+            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 60%"></div>
+        <% } %>
+        <% if(found.comper===70){ %>
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar"
+            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 70%"></div>
+        <% } %>
+        <% if(found.comper===80){ %>
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar"
+            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
+        <% } %>
+        <% if(found.comper===90){ %>
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar"
+            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
+        <% } %>
+        <% if(found.comper===100){ %>
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar"
+            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+
+        <% } %>
+    </div>
+</div>
+<%  if(found.Feedback===1){ %>
+<div class="card text-center" style="margin-bottom: 100px !important">
+    <div class="card-header">
+        Feedback
+    </div>
+    <div class="card-body">
+
+        <form action="/freply" method="POST">
+            <h5 class="card-title">Give your stars</h5>
+            <span class="fa fa-star a"></span>
+            <span class="fa fa-star b"></span>
+            <span class="fa fa-star c"></span>
+            <span class="fa fa-star d"></span>
+            <span class="fa fa-star e"></span>
+            <h5>Give Your Feedback</h5>
+            <input type="hidden" value="<%= found._id %> " name="fed1">
+            <input type="hidden" value="<%= found.orderId %>" name="kkk">
+            <div class="form-group">
+                <textarea class="form-control" name="fees" id="exampleFormControlTextarea1" rows="3"
+                    required></textarea>
+            </div>
+            <button class="btn-lo" type="submit" name="kk" value=" ">Submit</button>
+        </form>
+
+    </div>
+</div>
+
+<% } %>               
+    <% } %>
+         <% }) %>  
+    
+</div>
+ </section>
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="hide.js"></script>
+</body>
+</html>

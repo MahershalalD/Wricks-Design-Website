@@ -1,0 +1,68 @@
+.adminp{
+    background-image: url("admin.png");
+    height: 200px;
+    background-size: cover;
+}
+
+#txt{
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+}
+.dd{
+  padding: 2px 0;
+    background-color: #2f3640;
+    color: white;
+    margin-bottom: 10px;
+}
+.txt{
+    font-size: 30px;
+    font-family: 'Anton', sans-serif;
+}
+.blinking{
+    animation:blinkingText .2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: #000;    }
+    49%{    color: #000; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #000;    }
+}
+.odrder{ 
+    padding-top: 20px;
+    background-color: #2C3A47;
+    margin-bottom: 8px;
+    border-radius: 20px;
+    color: white;
+    padding-bottom: 30px;
+}
+.djj{
+    background-image: url("tra.png");
+    background-size: cover;
+    height: 200px;
+}
+.bgfor{
+    background-color: crimson;
+    background-size: cover;
+    border-radius: 10px;
+    padding: 0px 20px;
+    animation: step-start 2s;
+}
+.checked {
+  color: orange;
+}
+.strike{text-decoration: line-through;}
+
+
+@media only screen and (max-width: 600px) {
+.adminp{
+    background-image: url("admin-mobile.png");
+    background-size: cover;
+    height: 200px;
+}
+.djj{
+    background-image: url("testi-mobile.png");
+    background-size: cover;
+    height: 200px;
+}
+}

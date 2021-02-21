@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wricks-AdminPannel</title>
+    <link rel="stylesheet" href="admin.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- googlefonr -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/2cf437a4a5.js" crossorigin="anonymous"></script>
+</head>
+
+<body onload="startTime()">
+    <div class="djj">
+
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #2f3640 !important;">
+        <a class="navbar-brand dd " href="/admin" style=" color: white !important;">WRICKS ADMIN</a> 
+        <a class="navbar-brand dh" href="/comple" style=" color: white !important;">COMPLETED</a>
+        <a class="navbar-brand dh bgfor" href="/testi" style=" color: white !important;">FEEDBACK</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link active" href="" style=" color: white !important;">
+                    <table>
+                        <tr>
+                            <th>
+                                <h1 class="txt" style="font-family: 'Oswald', sans-serif;">Time :</h1>
+                            </th>
+                            <th>
+                                <div id="txt" style="font-family: 'Oswald', sans-serif;"> </div>
+                            </th>
+                        </tr>
+    
+                    </table>
+                </a>
+                <a class="nav-item nav-link" href="#" style=" color: white !important;">
+                    <table>
+                        <tr>
+                            <th>
+                                <span class="blinking">🟢</span>
+                            </th>
+                            <th>
+                                <h3 style="font-family: 'Oswald', sans-serif; color: chartreuse;">Online </h3>
+                            </th>
+                        </tr>
+    
+                    </table>
+                </a>
+                <a class="nav-item nav-link" href="#">
+                    <table>
+                        <tr>
+                            <th>
+                                <span class="blinking">🔴</span>
+                            </th>
+                            <th>
+                                <h3 style="font-family: 'Oswald', sans-serif; color: red;">Database Connected </h3>
+                            </th>
+                        </tr>
+    
+                    </table>
+                </a>
+                <a class="nav-item nav-link " href="/logout" style=" color: white !important;"><button
+                        class="btn btn-outline-danger"> Log-Out</button></a>
+            </div>
+        </div>
+    </nav>
+    <%  newe.forEach(function(item){ %>
+        <%  newed.forEach(function(items){ %>
+            <%  if(items.orderId=== item.workid){ %>
+    <div class="container-fluid">
+        <div class="card" style="margin-top: 20px;">
+            <div class="card-header text-center" style="background-color: #2C3A47;">
+               <% if(item.nos===1){ %>
+                    <span class="fa fa fa-2x fa-star a checked"></span>
+                    <span class="fa fa-2x fa-star b"></span>
+                    <span class="fa fa-2x fa-star c"></span>
+                    <span class="fa fa-2x fa-star d"></span>
+                    <span class="fa fa-2x fa-star e"></span>
+              <%  } %>
+              <%  if( item.nos===2){ %>
+                <span class="fa fa-2x fa-star a checked"></span>
+                <span class="fa fa-2x fa-star b checked"></span>
+                <span class="fa fa-2x fa-star c"></span>
+                <span class="fa fa-2x fa-star d"></span>
+                <span class="fa fa-2x fa-star e"></span>
+            <%  } %>
+                <%  if( item.nos===3 ){ %>
+                <span class="fa fa-2x fa-star a checked"></span>
+                <span class="fa fa-2x fa-star b checked"></span>
+                <span class="fa fa-2x fa-star c checked"></span>
+                <span class="fa fa-2x fa-star d "></span>
+                <span class="fa fa-2x fa-star e"></span>
+                <%  } %>
+            <%   if( item.nos===4 ){ %>
+                <span class="fa fa-2x fa-star a checked"></span>
+                <span class="fa fa-2x fa-star b checked"></span>
+                <span class="fa fa-2x fa-star c checked"></span>
+                <span class="fa fa-2x fa-star d checked"></span>
+                <span class="fa fa-2x fa-star e"></span>
+                <%  } %>
+            <%   if( item.nos===5){ %>
+                <span class="fa fa-2x fa-star a checked"></span>
+                <span class="fa fa-2x fa-star b checked"></span>
+                <span class="fa fa-2x fa-star c checked"></span>
+                <span class="fa fa-2x fa-star d checked"></span>
+                <span class="fa fa-2x fa-star e checked"></span>
+                <%  } %>
+            
+            </div> 
+            
+            <div class="card-body text-center" style="background-color: #ED4C67; color: white;">
+                <blockquote class="blockquote mb-0">
+                    <p><%= item.Feedback %></p>
+                </blockquote>
+            </div>
+                 <div class="card-footer" style="background-color: #6F1E51; color: white;">
+                        <div class="row">
+                            <div class="col-lg-2">
+                                OrderId :
+                            </div>
+                            <div class="col-lg-2">
+                                <%= items.orderId %>
+                            </div>
+                            <div class="col-lg-2">
+                                UserName :
+                            </div>
+                            <div class="col-lg-2">
+                                <%= items.Name %>
+                            </div>
+                        </div>
+                <%  } %>
+            </div>
+        </div>
+    </div>
+    </div>
+
+   <% }) %>
+<% }) %>
+
+    
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
+<script src="admin.js"></script>
+</body>
+</html>
